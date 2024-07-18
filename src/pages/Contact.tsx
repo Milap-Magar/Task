@@ -1,8 +1,12 @@
+import { Navbar } from "../components";
+import "./index.css";
 
 const Contact = () => {
   return (
     <section id="contact">
-      <div className="container">Contact</div>
+      <div className="container">
+        <Navbar />
+      </div>
     </section>
   );
 };

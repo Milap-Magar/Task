@@ -1,7 +1,8 @@
+import "./index.css";
 
 const About = () => {
   return (
-    <article>
+    <article id="about">
       <div className="aboutcontainer">About</div>
     </article>
   );

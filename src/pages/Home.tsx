@@ -1,11 +1,12 @@
 import { Main, Navbar } from "../components";
+import "./index.css";
 
 const Home = () => {
   return (
-    <div>
+    <section className="wrapper-container">
       <Navbar />
       <Main />
-    </div>
+    </section>
   );
 };
 

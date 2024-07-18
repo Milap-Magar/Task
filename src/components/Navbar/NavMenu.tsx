@@ -1,12 +1,22 @@
+import { Link } from "react-router-dom";
 import "./Nav.css";
 
 const NavMenu = () => {
   return (
     <nav className="nav-container">
       <ul className="list-items">
-        <li className="item"><a href="#home"></a>Home</li>
-        <li className="item"><a href="#about"></a>About</li>
-        <li className="item"><a href="#contact"></a>Contact</li>
+        <Link to="/" className="item">
+          <li>Home</li>
+        </Link>
+        <Link to="/about" className="item">
+          <li>About</li>
+        </Link>
+        <Link to="/about" className="item">
+          <li>Project</li>
+        </Link>
+        <Link to="/contact" className="item">
+          <li>Contact</li>
+        </Link>
       </ul>
     </nav>
   );

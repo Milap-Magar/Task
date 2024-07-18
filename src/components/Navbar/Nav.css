@@ -4,9 +4,8 @@
   height: 17vh;
   display: flex;
   justify-content: space-between;
-  background-color: #d0cdcd;
+  background-color: transparent;
 }
-
 /* Figure Section */
 .figure-container {
   padding: 6px;
@@ -29,12 +28,16 @@
   list-style: none;
   gap: 10px;
 }
-.item{
-    padding: 10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.item {
+  color: hsl(0, 0%, 97%);
+  padding: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
 }
-.item:hover{
-    background-color: #fff;
+.item:hover {
+  color: hsl(0, 0%, 45%);
 }
 
 @media screen and (max-width: 600px) {
@@ -80,7 +83,7 @@
   }
 
   .figure-container {
-    padding: 5px;
+    padding: 12px;
   }
 
   .nav-container {

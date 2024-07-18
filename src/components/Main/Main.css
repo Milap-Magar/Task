@@ -1,22 +1,62 @@
 .intro-container {
-    padding: 20px;
-    text-align: center;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    max-width: 800px;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1); 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(154, 151, 151, 0.1);
+  margin: 20px auto;
+  max-width: 800px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#main_heading {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+#main_span {
+  font-family: monospace;
+}
+
+.intro-container h1 {
+  font-size: 2.5em;
+  color: #dbd8d8;
+}
+
+.intro-container p {
+  font-size: 1.2em;
+  color: #dbd8d8;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 600px) {
+  .intro-container h1 {
+    font-size: 2em;
   }
-  
+
+  .intro-container p {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+  .intro-container h1 {
+    font-size: 2.2em;
+  }
+
+  .intro-container p {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (min-width: 1201px) {
   .intro-container h1 {
     font-size: 2.5em;
-    color: #333;
   }
-  
+
   .intro-container p {
     font-size: 1.2em;
-    color: #666;
-    line-height: 1.5;
-    margin-top: 10px;
   }
-  
+}

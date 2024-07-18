@@ -1,5 +1,5 @@
 import NavMenu from "./NavMenu";
-import Logo  from "../../assets/logo.svg";
+import Logo  from "../../assets/logo1.svg";
 import "./Nav.css";
 
 const Navbar = () => {
