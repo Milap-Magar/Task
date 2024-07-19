@@ -1,13 +1,21 @@
+import { Container, Box, styled } from "@mui/material";
 import { Navbar } from "../components";
-import "./index.css";
+
+const WrapperContainer = styled(Container)({
+  width: "100%",
+  height: "100vh",
+  background:
+    "radial-gradient(ellipse, hsl(0, 0%, 64%) 0%, hsl(0, 1%, 16%) 100%, hsl(0, 0%, 41%) 50%)",
+});
 
 const Contact = () => {
   return (
-    <section id="contact">
-      <div className="container">
+    <WrapperContainer maxWidth="xl" disableGutters>
+      <Box>
         <Navbar />
-      </div>
-    </section>
+        
+      </Box>
+    </WrapperContainer>
   );
 };
 
