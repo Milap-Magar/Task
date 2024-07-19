@@ -1,24 +1,49 @@
 import { Link } from "react-router-dom";
-import "./Nav.css";
+import { Box, List, styled } from "@mui/material";
+
+const NavContainer = styled(Box)(({ theme }) => ({
+  padding: "20px",
+  [theme.breakpoints.down("sm")]: {
+    padding: "10px",
+  },
+  [theme.breakpoints.between("sm", "md")]: {
+    padding: "15px",
+  },
+  [theme.breakpoints.up("md")]: {
+    padding: "25px",
+  },
+}));
+
+const ListItems = styled(List)({
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  listStyle: "none",
+  gap: "10px",
+});
+
+const Item = styled(Link)({
+  color: "hsl(0, 0%, 97%)",
+  padding: "10px",
+  fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif',
+  borderRadius: "10px",
+  textDecoration: "none",
+  cursor: "pointer",
+  "&:hover": {
+    color: "hsl(0, 0%, 45%)",
+  },
+});
 
 const NavMenu = () => {
   return (
-    <nav className="nav-container">
-      <ul className="list-items">
-        <Link to="/" className="item">
-          <li>Home</li>
-        </Link>
-        <Link to="/about" className="item">
-          <li>About</li>
-        </Link>
-        <Link to="/about" className="item">
-          <li>Project</li>
-        </Link>
-        <Link to="/contact" className="item">
-          <li>Contact</li>
-        </Link>
-      </ul>
-    </nav>
+    <NavContainer component="nav">
+      <ListItems>
+        <Item to="/">Home</Item>
+        <Item to="/about">About</Item>
+        <Item to="/projects">Projects</Item>
+        <Item to="/contact">Contact</Item>
+      </ListItems>
+    </NavContainer>
   );
 };
 
