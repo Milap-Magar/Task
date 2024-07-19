@@ -1,15 +1,3 @@
-/* Default styles */
-.container {
-  width: 100%;
-  height: 17vh;
-  display: flex;
-  justify-content: space-between;
-  background-color: transparent;
-}
-/* Figure Section */
-.figure-container {
-  padding: 6px;
-}
 #logo-img {
   width: 75px;
   height: auto;
@@ -41,15 +29,6 @@
 }
 
 @media screen and (max-width: 600px) {
-  .container {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .figure-container {
-    padding: 10px;
-  }
-
   .nav-container {
     padding: 10px;
   }
@@ -60,14 +39,6 @@
 }
 
 @media screen and (min-width: 601px) and (max-width: 1200px) {
-  .container {
-    height: 20vh;
-  }
-
-  .figure-container {
-    padding: 8px;
-  }
-
   .nav-container {
     padding: 15px;
   }
@@ -78,14 +49,6 @@
 }
 
 @media screen and (min-width: 1201px) {
-  .container {
-    height: 15vh;
-  }
-
-  .figure-container {
-    padding: 12px;
-  }
-
   .nav-container {
     padding: 25px;
   }

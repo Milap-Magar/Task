@@ -1,15 +1,28 @@
 import NavMenu from "./NavMenu";
-import Logo  from "../../assets/logo1.svg";
-import "./Nav.css";
+import Logo from "../../assets/logo1.svg";
+import { Container, styled } from "@mui/material";
+
+// import "./Nav.css";
 
 const Navbar = () => {
+  const StyledContainer = styled("figure")({
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "6px",
+  });
+  const LogoImage = styled("img")({
+    width: "70px",
+    height: "auto",
+  });
+  
   return (
-    <header className="container">
-      <figure className="figure-container">
-        <img src={Logo} alt="Logo image" id="logo-img" />
-      </figure>
+    <Container>
+      <StyledContainer>
+        <LogoImage src={Logo} alt="Logo image" /> 
+      </StyledContainer>
       <NavMenu />
-    </header>
+    </Container>
   );
 };
 
