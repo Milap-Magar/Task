@@ -1,5 +1,8 @@
-import { Container, Box, styled } from "@mui/material";
-import { Navbar } from "../components";
+import { Container, Box, styled, Button } from "@mui/material";
+
+import { Dialog, Navbar } from "../components";
+import Footer from "../components/Footer/Footer";
+import { useState } from "react";
 
 const WrapperContainer = styled(Container)({
   width: "100%",
@@ -9,11 +12,25 @@ const WrapperContainer = styled(Container)({
 });
 
 const Contact = () => {
+  const [open, setOpen] = useState(false);
+
+  const openForm = () => {
+    setOpen(true);
+  };
+
+  const closeForm = () => {
+    setOpen(false);
+  };
+  
   return (
     <WrapperContainer maxWidth="xl" disableGutters>
       <Box>
         <Navbar />
-        
+        <Button variant="contained" color="success" onClick={openForm}>
+          Contact Me
+        </Button>
+        <Dialog open={open} closeForm={closeForm} />
+        <Footer />
       </Box>
     </WrapperContainer>
   );

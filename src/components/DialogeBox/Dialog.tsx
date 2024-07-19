@@ -1,28 +1,58 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Dialog.css";
+import {
+  Button,
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogActions,
+  Stack,
+  TextField,
+} from "@mui/material";
 
-const DialogBox: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+interface MainProps {
+  open: boolean;
+  closeForm: () => void;
+}
 
-  const toggleDialog = () => {
-    setIsOpen(!isOpen);
+const DialogBox: React.FC<MainProps> = ({ open, closeForm }) => {
+  const onSubmit = () => {
+    console.log("Submitted");
   };
 
   return (
-    <div className="dialog-container">
-      <button onClick={toggleDialog} className="open-dialog-btn">
-        Open Dialog
-      </button>
-      {isOpen && (
-        <div className="dialog-box">
-          <h2>This is a Dialog Box</h2>
-          <p>Hello, this is your dialog content!</p>
-          <button onClick={toggleDialog} className="close-dialog-btn">
-            Close
-          </button>
-        </div>
-      )}
-    </div>
+    <Dialog open={open} onClose={closeForm} fullWidth>
+      <DialogTitle
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          fontFamily: "Quicksand, sans-serif",
+        }}
+      >
+        Contact Form
+      </DialogTitle>
+      <DialogContent>
+        <Stack spacing={2} margin={2}>
+          <TextField variant="outlined" label="Name" />
+          <TextField variant="outlined" label="Email" />
+          <TextField variant="outlined" label="Message" multiline rows={4} />
+        </Stack>
+      </DialogContent>
+      <DialogActions
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Button onSubmit={onSubmit} variant="contained" color="success">
+          Submit
+        </Button>
+        <Button onClick={closeForm} variant="contained" color="error">
+          Close
+        </Button>
+      </DialogActions>
+    </Dialog>
   );
 };
 

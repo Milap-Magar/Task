@@ -1,5 +1,11 @@
+import { Container } from "@mui/material";
+
 const Form = () => {
-  return <div></div>;
+  return (
+    <Container>
+      
+    </Container>
+  );
 };
 
 export default Form;

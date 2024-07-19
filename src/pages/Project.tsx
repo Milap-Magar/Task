@@ -11,6 +11,7 @@ import {
 import { Main, Navbar } from "../components";
 
 import project1Image from "../assets/project1.png";
+import Footer from "../components/Footer/Footer";
 
 const WrapperContainer = styled(Container)({
   width: "100%",
@@ -132,6 +133,7 @@ const Project = () => {
           ))}
         </Grid>
       </ContentBox>
+      <Footer />
     </WrapperContainer>
   );
 };

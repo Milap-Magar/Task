@@ -1,5 +1,6 @@
 import { Container, Box, styled } from "@mui/material";
 import { Main, Navbar } from "../components";
+import Footer from "../components/Footer/Footer";
 
 const WrapperContainer = styled(Container)({
   width: "100%",
@@ -18,6 +19,7 @@ const Home = () => {
         <Navbar />
         <Main heading={heading} paragraph={paragraph} />
       </Box>
+      <Footer />
     </WrapperContainer>
   );
 };
