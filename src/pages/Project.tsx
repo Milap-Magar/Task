@@ -12,6 +12,7 @@ import { Main, Navbar } from "../components";
 
 import project1Image from "../assets/project1.png";
 import Footer from "../components/Footer/Footer";
+import DataDisplay from "../components/DataDisplay/Display";
 
 const WrapperContainer = styled(Container)({
   width: "100%",
@@ -32,41 +33,6 @@ const Project = () => {
   const heading = "This is my Project Section";
   const paragraph = "Here are the projects along with github codes and website";
 
-  const projects = [
-    {
-      title: "Complain Management System",
-      description:
-        "This system was my first full stack project which includes frontend, backend, database and deployment too.",
-      link: "https://github.com/Milap-Magar/Project1",
-      image: project1Image,
-    },
-    {
-      title: "E-commerce Store",
-      description: "Description for project 2.",
-      link: "https://github.com/Milap-Magar/Project2",
-      image: project1Image,
-    },
-    {
-      title: "Travel Page",
-      description: "Description for project 2.",
-      link: "https://github.com/Milap-Magar/Project2",
-      image: project1Image,
-    },
-    {
-      title: "Basic Calculator",
-      description: "My first self made calculator using DOM maniplutaion",
-      link: "https://github.com/Milap-Magar/Project2",
-      image: project1Image,
-    },
-    {
-      title: "Nike Store",
-      description:
-        "I created this website watching youtube video, which is also my first project",
-      link: "https://github.com/Milap-Magar/Project2",
-      image: project1Image,
-    },
-  ];
-
   return (
     <WrapperContainer maxWidth="xl" disableGutters>
       <Navbar />
@@ -80,6 +46,7 @@ const Project = () => {
             alignItems: "center",
             fontFamily: "Quicksand, sans-serif",
             textDecoration: "underline",
+            marginBottom: "20px",
           }}
           gutterBottom
         >
@@ -92,45 +59,7 @@ const Project = () => {
             marginBottom: "20px",
           }}
         >
-          {projects.map((project, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>
-              <Card
-                sx={{
-                  background: "trasparent",
-                }}
-              >
-                <CardMedia
-                  component="img"
-                  alt={project.title}
-                  height="140"
-                  image={project.image}
-                />
-                <CardContent
-                  sx={{
-                    background: "trasparent",
-                    margin: "10px",
-                  }}
-                >
-                  <Typography variant="h6" component="div">
-                    {project.title}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {project.description}
-                  </Typography>
-                  <Typography variant="body2" color="primary">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ textDecoration: "none", color: "inherit" }}
-                    >
-                      View on GitHub
-                    </a>
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
+          <DataDisplay />
         </Grid>
       </ContentBox>
       <Footer />
