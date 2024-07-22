@@ -2,7 +2,6 @@ import NavMenu from "./NavMenu";
 import Logo from "../../assets/logo1.svg";
 import { Container, styled } from "@mui/material";
 
-// import "./Nav.css";
 
 const Navbar = () => {
   const StyledContainer = styled("figure")({
