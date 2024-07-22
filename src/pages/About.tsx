@@ -1,5 +1,5 @@
 import { Container, Box, styled } from "@mui/material";
-import { Main, Navbar } from "../components";
+import { Navbar } from "../components";
 import Footer from "../components/Footer/Footer";
 
 const WrapperContainer = styled(Container)({
@@ -14,7 +14,6 @@ const About = () => {
     <WrapperContainer maxWidth="xl" disableGutters>
       <Box>
         <Navbar />
-        <Main />
         <Footer />
       </Box>
     </WrapperContainer>

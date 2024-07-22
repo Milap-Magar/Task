@@ -1,4 +1,6 @@
+// src/components/DialogBox.tsx
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
 import {
   Button,
   Dialog,
@@ -8,37 +10,29 @@ import {
   Stack,
   TextField,
 } from "@mui/material";
-
 import { useFormik } from "formik";
 import { formSchema } from "../../schemas";
+import { AppDispatch, RootState } from "../../store/store";
+import { resetFormValues, setFormValues } from "../../store/slices/formSlice";
 
 interface MainProps {
   open: boolean;
   closeForm: () => void;
 }
 
-interface FormValues {
-  fname: string;
-  lname: string;
-  email: string;
-  message: string;
-}
-
-const initialValues: FormValues = {
-  fname: "",
-  lname: "",
-  email: "",
-  message: "",
-};
-
 const DialogBox: React.FC<MainProps> = ({ open, closeForm }) => {
-  const formik = useFormik<FormValues>({
-    initialValues: initialValues,
+  const dispatch = useDispatch<AppDispatch>();
+  const formValues = useSelector((state: RootState) => state.form);
+
+  const formik = useFormik({
+    initialValues: formValues,
     validationSchema: formSchema,
     onSubmit: (values, action) => {
+      dispatch(setFormValues(values));
       console.log("🚀 ~ values:", values);
       alert("Submitted");
       action.resetForm();
+      dispatch(resetFormValues());
     },
   });
 
