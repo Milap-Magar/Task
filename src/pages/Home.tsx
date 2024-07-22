@@ -10,9 +10,9 @@ const WrapperContainer = styled(Container)({
 });
 
 const Home = () => {
-  const heading = ", I'm Milap Magar!";
+  const heading = " Welcome to my portfolio";
   const paragraph =
-    "I'm a passionate developer pursuing BCA. I work with web-stack of  Java, React, and more. Welcome to my portfolio! Feel free to explore my projects and get to know more about my work and experience.";
+    "I'm Milap Magar! and a passionate developer pursuing BCA. I work with web-stack of  Java, React, and more. Feel free to explore my projects and get to know more about my work and experience.";
   return (
     <WrapperContainer maxWidth="xl" disableGutters>
       <Box>

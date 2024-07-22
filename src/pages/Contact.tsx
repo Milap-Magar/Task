@@ -29,7 +29,6 @@ const Contact = () => {
           width="100%"
           sx={{
             heigh: "100vh",
-            border: "2px solid #fff",
             backgroundColor: "transparent",
             paddingBottom: "10px",
             marginBottom: "5px",
@@ -47,10 +46,10 @@ const Contact = () => {
           </Typography>
           <Main
             heading="This is Milap"
-            paragraph=" You can contact me via sending the message via Contact"
+            paragraph=" You can contact me via clicking the message me button"
           />
           <Button variant="contained" color="success" onClick={openForm}>
-            Contact Me
+            Message me
           </Button>
         </Box>
       </Container>

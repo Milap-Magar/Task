@@ -40,8 +40,7 @@ const Main: React.FC<MainProps> = ({ heading, paragraph }) => {
             paddingBottom: "15px",
           }}
         >
-          Hello
-          <span id="main_span">{heading}</span>
+          Hello ,<span id="main_span">{heading}</span>
         </Typography>
         <Typography
           sx={{
